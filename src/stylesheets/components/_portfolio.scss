@@ -1,0 +1,64 @@
+.portfolio {
+  @include outer-container;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    @include span-columns(4 of 12);
+    margin-bottom: 3vh;
+    position: relative;
+
+    &:first-child {
+      @include span-columns(12 of 12);
+
+      .image-item { margin-left: 0; }
+    }
+  }
+
+  &__description {
+    @include transition(all .5s ease-in-out);
+    @include background-image(linear-gradient(to right, rgba(#158DC6, .85), rgba(#B4EC51, .85)));
+    height: 350px;
+    bottom: -290px;
+    color: #ffffff;
+    left: 0px;
+    padding: rem(30);
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  &__image-wrapper {
+    @include background-image(linear-gradient(to right, rgba(#158DC6, 1), rgba(#B4EC51, 1)));
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  	margin-bottom: 20px;
+
+    &:hover .image-item{
+    	@include transition(all .5s ease-in-out);
+      @include filter(blur(5px));
+      @include transform(scale(1.1));
+    }
+
+    &:hover .portfolio__description {
+    	@include transition(all .5s ease-in-out);
+    	bottom: 0px;
+    	height: 350px;
+    }
+
+    .image-item {
+    	@include transition(all .5s ease-in-out);
+    	top: 0px;
+      display: block;
+      margin-left: -50%;
+      min-height: 100%;
+      min-width: 100%;
+    }
+  }
+}
