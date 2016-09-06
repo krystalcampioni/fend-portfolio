@@ -1,0 +1,8 @@
+{
+  "name": "gulpportfolio",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "*"
+    },
+  "devDependencies": {  }
+}
