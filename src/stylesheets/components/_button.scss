@@ -1,0 +1,43 @@
+.button {
+  @include transition(all .5s ease-in-out);
+  @include appearance(none);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding: rem(15) rem(20);
+  border-radius: $base-border-radius;
+
+  &:hover {
+    @include transform(scale(1.1));
+  }
+
+  &--primary {
+    border: 1px solid $dark-gray;
+    color: $dark-gray;
+    text-align: center;
+    font-size: rem(14);
+
+    &:hover {
+      background: $dark-gray;
+      color: $white;
+    }
+  }
+
+
+  &--secondary {
+    border: 1px solid $white;
+    color: $white;
+    text-align: center;
+    font-size: rem(14);
+
+    &:hover {
+      background: $white;
+      color: $action-color;
+    }
+  }
+}
