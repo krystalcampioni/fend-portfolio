@@ -3,6 +3,10 @@
   border-bottom: 2px solid rgba(93, 115, 125, 0.23);
   padding: 15px 0;
 
+  @include media($tablet) {
+    padding: 15px;
+  }
+
   &__logo {
     @include span-columns(3 of 12);
 

@@ -24,6 +24,11 @@
       &:first-child {
         @include span-columns(12 of 12);
 
+        .portfolio__text {
+          @include span-columns(8 of 12);
+          @include shift(2);
+        }
+
         .image-item {
           margin-left: 0;
           height: auto;
@@ -47,10 +52,15 @@
     text-align: center;
     text-decoration: none;
 
-    span {
+    .portfolio__category {
       @include span-columns(12 of 12);
       margin: rem(50) 0  rem(20) 0;
     }
+  }
+
+  &__text {
+    @include span-columns(12 of 12);
+    font-size: rem(12);
   }
 
   &__image-wrapper {

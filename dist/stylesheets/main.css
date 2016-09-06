@@ -67,6 +67,9 @@ hr {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 800px) {
+    .header {
+      padding: 15px; } }
   .header__logo {
     float: left;
     display: block;
@@ -145,6 +148,14 @@ hr {
         width: 100%; }
         .portfolio__item:first-child:last-child {
           margin-right: 0; }
+        .portfolio__item:first-child .portfolio__text {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 65.88078%;
+          margin-left: 17.05961%; }
+          .portfolio__item:first-child .portfolio__text:last-child {
+            margin-right: 0; }
         .portfolio__item:first-child .image-item {
           margin-left: 0;
           height: auto;
@@ -165,14 +176,22 @@ hr {
     right: 0px;
     text-align: center;
     text-decoration: none; }
-    .portfolio__description span {
+    .portfolio__description .portfolio__category {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 100%;
       margin: 3.125rem 0 1.25rem 0; }
-      .portfolio__description span:last-child {
+      .portfolio__description .portfolio__category:last-child {
         margin-right: 0; }
+  .portfolio__text {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    font-size: 0.75rem; }
+    .portfolio__text:last-child {
+      margin-right: 0; }
   .portfolio__image-wrapper {
     background-image: -webkit-linear-gradient( left , #158dc6, #b4ec51);
     background-image: linear-gradient(to right, #158dc6, #b4ec51);
@@ -221,6 +240,9 @@ hr {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 800px) {
+    .footer {
+      padding: 15px; } }
 
 .button {
   -webkit-transition: all 0.5s ease-in-out;
