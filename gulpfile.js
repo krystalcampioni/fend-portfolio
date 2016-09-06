@@ -6,7 +6,13 @@ var gulp        = require('gulp'),
     reload      = browserSync.reload,
     browserify  = require('browserify'),
     del         = require('del'),
+    sass        = require('gulp-sass'),
+    neat        = require('node-neat').includePaths,
     argv        = require('yargs').argv;
+
+var paths = {
+  scss: './src/stylesheets/*.scss'
+};
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -18,14 +24,12 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('compass', function() {
-  return gulp.src('./src/stylesheets/**/*.{scss,sass}')
-    .pipe($.plumber())
-    .pipe($.compass({
-      css: 'dist/stylesheets',
-      sass: 'src/stylesheets'
-    }))
-    .pipe(gulp.dest('dist/stylesheets'));
+gulp.task('styles', function () {
+    return gulp.src(paths.scss)
+        .pipe(sass({
+            includePaths: ['styles'].concat(neat)
+        }))
+        .pipe(gulp.dest('./dist/stylesheets'));
 });
 
 
@@ -74,10 +78,10 @@ gulp.task('templates', function() {
 
 
 
-gulp.task('build', ['compass', 'js', 'templates', 'images']);
+gulp.task('build', ['styles', 'js', 'templates', 'images']);
 
 gulp.task('serve', ['build', 'browser-sync'], function () {
-  gulp.watch('src/stylesheets/**/*.{scss,sass}',['compass', reload]);
+  gulp.watch('src/stylesheets/**/*.{scss,sass}',['styles', reload]);
   gulp.watch('src/scripts/**/*.js',['js', reload]);
   gulp.watch('src/images/**/*',['images', reload]);
   gulp.watch('src/*.jade',['templates', reload]);
