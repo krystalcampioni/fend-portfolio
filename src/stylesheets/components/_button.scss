@@ -1,12 +1,10 @@
 .button {
   @include transition(all .5s ease-in-out);
-  @include appearance(none);
   cursor: pointer;
   display: inline-block;
   font-weight: bold;
   line-height: 1;
   text-decoration: none;
-  user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   padding: rem(15) rem(20);
