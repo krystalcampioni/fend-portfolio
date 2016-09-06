@@ -1,30 +1,135 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,500,600,700,900&subset=latin);
 html {
   box-sizing: border-box; }
 
 *, *::after, *::before {
   box-sizing: inherit; }
 
-body, * {
-  background-color: red;
-  background-image: -webkit-linear-gradient(bottom, red, orange);
-  background-image: linear-gradient(to top,red, orange);
-  font-family: sans-serif; }
+@-webkit-keyframes scale-fade {
+  0% {
+    -webkit-transform: scale(0.8) rotateX(-40deg);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  70% {
+    -webkit-transform: scale(1.05) rotateX(0); }
+  100% {
+    -webkit-transform: scale(1) rotateX(0); } }
 
-.container {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%;
-  height: auto;
-  border: 1px solid #ccc;
-  background: #fff;
-  box-shadow: 1px 1px 1px black;
-  border-radius: 3px;
-  margin: 0 auto;
-  padding: 35px; }
-  .container:last-child {
-    margin-right: 0; }
-  .container * {
-    background: #fff; }
-  .container h1 {
-    text-align: center; }
+@-moz-keyframes scale-fade {
+  0% {
+    -moz-transform: scale(0.8) rotateX(-40deg);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  70% {
+    -moz-transform: scale(1.05) rotateX(0); }
+  100% {
+    -moz-transform: scale(1) rotateX(0); } }
+
+@keyframes scale-fade {
+  0% {
+    -webkit-transform: scale(0.8) rotateX(-40deg);
+    -moz-transform: scale(0.8) rotateX(-40deg);
+    -ms-transform: scale(0.8) rotateX(-40deg);
+    -o-transform: scale(0.8) rotateX(-40deg);
+    transform: scale(0.8) rotateX(-40deg);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  70% {
+    -webkit-transform: scale(1.05) rotateX(0);
+    -moz-transform: scale(1.05) rotateX(0);
+    -ms-transform: scale(1.05) rotateX(0);
+    -o-transform: scale(1.05) rotateX(0);
+    transform: scale(1.05) rotateX(0); }
+  100% {
+    -webkit-transform: scale(1) rotateX(0);
+    -moz-transform: scale(1) rotateX(0);
+    -ms-transform: scale(1) rotateX(0);
+    -o-transform: scale(1) rotateX(0);
+    transform: scale(1) rotateX(0); } }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+figure {
+  margin: 0; }
+
+img {
+  max-width: 100%; }
+
+body {
+  color: #333;
+  font-family: "Raleway", sans-serif;
+  font-feature-settings: 'kern', 'liga', 'pnum';
+  font-size: 0.875em;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.875em;
+  line-height: 1.2;
+  margin: 0 0 0.75em; }
+
+p {
+  margin: 0 0 0.75em; }
+
+a {
+  color: #50e3c2;
+  text-decoration: none;
+  transition: color 150ms ease; }
+  a:active, a:focus, a:hover {
+    color: #3caa92; }
+
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1.5em 0; }
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
+
+.header {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .header::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .header__logo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .header__logo:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 800px) {
+      .header__logo {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        .header__logo:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 500px) {
+      .header__logo {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%;
+        margin-left: 17.05961%; }
+        .header__logo:last-child {
+          margin-right: 0; } }

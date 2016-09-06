@@ -11,7 +11,7 @@ var gulp        = require('gulp'),
     argv        = require('yargs').argv;
 
 var paths = {
-  scss: './src/stylesheets/*.scss'
+  scss: './src/stylesheets/main.scss'
 };
 
 gulp.task('browser-sync', function() {
