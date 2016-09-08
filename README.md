@@ -1,4 +1,4 @@
-# fend-portfolio
+# Gulp-Sass-Jade Portfolio
 
 **Dependencies:**
 * [NodeJs](https://nodejs.org/en/)
